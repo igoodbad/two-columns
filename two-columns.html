@@ -1,0 +1,43 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="two-columns">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      .container {
+        display: flex;
+        justify-content: space-around;
+      }
+    </style>
+    <div class="container">
+      <slot id="left-slot"></slot>
+      <slot id="right-slot"></slot>
+    </div>
+  </template>
+
+  <script>
+    /**
+     * `two-columns`
+     * Component with two columns customized
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class TwoColumns extends Polymer.Element {
+      static get is() { return 'two-columns'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'two-columns'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(TwoColumns.is, TwoColumns);
+  </script>
+</dom-module>

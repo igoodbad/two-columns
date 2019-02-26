@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>two-columns demo</title>
+
+  <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../two-columns.html">
+
+  <custom-style>
+    <style>
+      two-columns{
+        border: 0.1em solid black;
+      }
+      .left-slot {
+        background-color: #38affb;
+        color: #fff;
+        width: 100%;
+      }
+      .right-slot {
+        background-color: red;
+        color: #fff;
+        width: 100%;
+      }
+    </style>
+  </custom-style>
+</head>
+<body>
+  <div class="vertical-section-container centered">
+    <h3>Basic two-columns demo</h3>
+    <demo-snippet>
+
+      <template>
+        <h3>Solo textos</h3>
+        <two-columns class="columns">
+          <div name="left-slot" class="left-slot">a la izquierda</div>
+          <div name="right-slot" class="right-slot">a la derecha</div>
+        </two-columns>
+        <h3>imagen / texto</h3>
+        <two-columns class="columns">
+          <div name="left-slot" class="left-slot">
+            <img src="https://ec.crypton.co.jp/img/special/vocaloid/img_MIKU_us.png" width="100px"/>
+          </div>
+          <div name="right-slot" class="right-slot">
+            he aqui una imagen
+          </div>
+        </two-columns>
+        <h3>imagen / imagen</h3>
+        <two-columns class="columns">
+          <div name="left-slot" class="left-slot">
+              <img src="https://c.stocksy.com/a/aOF800/z9/1965808.jpg" width="100px"/>
+          </div>
+          <div name="right-slot" class="right-slot">
+              <img src="https://ec.crypton.co.jp/img/special/vocaloid/img_MIKU_us.png" width="100px"/>
+          </div>
+        </two-columns>
+        <h3>texto / imagen</h3>
+        <two-columns class="columns">
+          <div name="left-slot" class="left-slot">otra imagen</div>
+          <div name="right-slot" class="right-slot">
+              <img src="https://ec.crypton.co.jp/img/special/vocaloid/img_MIKU_us.png" width="100px"/>
+          </div>
+        </two-columns>
+        <h3>lista / imagen</h3>
+        <two-columns class="columns">
+          <div name="left-slot" class="left-slot">
+            <ul>
+              <li>elemento a</li>
+              <li>elemento b</li>
+              <li>elemento c</li>
+              <li>elemento d</li>
+            </ul>
+          </div>
+          <div name="right-slot" class="right-slot">
+              <img src="https://ec.crypton.co.jp/img/special/vocaloid/img_MIKU_us.png" width="100px"/>
+          </div>
+        </two-columns>
+        <h3>tabla / lista</h3>
+        <two-columns class="columns">
+          <div name="left-slot" class="left-slot">
+            <table>
+              <thead>
+                <tr>
+                  <td>head 1</td>
+                  <td>head 2</td>
+                  <td>head 3</td>
+                  <td>head 4</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>body 1</td>
+                  <td>body 2</td>
+                  <td>body 3</td>
+                  <td>body 4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div name="right-slot" class="right-slot">
+              <ul>
+                  <li>elemento a</li>
+                  <li>elemento b</li>
+                  <li>elemento c</li>
+                  <li>elemento d</li>
+                </ul>
+          </div>
+        </two-columns>
+      </template>
+    </demo-snippet>
+  </div>
+</body>
+
+</html>
